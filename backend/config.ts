@@ -1,10 +1,10 @@
 export default () => ({
   database: {
-    host: process.env.DATABASE_HOST || 'localhost',
-    port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
-    name: process.env.DATABASE_NAME || 'kupipodariday',
-    usename: process.env.DATABASE_USERNAME || 'student',
-    password: process.env.DATABASE_PASSWORD || 'student',
+    host: process.env.POSTGRES_HOST || 'localhost',
+    port: parseInt(process.env.POSTGRES_PORT, 10) || 5432,
+    name: process.env.POSTGRES_DB || 'kupipodariday',
+    usename: process.env.POSTGRES_USER || 'student',
+    password: process.env.POSTGRES_PASSWORD || 'student',
   },
   appServer: {
     port: parseInt(process.env.APP_SERVER_PORT, 10) || 3001,
