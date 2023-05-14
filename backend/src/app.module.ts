@@ -16,15 +16,15 @@ import { AuthModule } from './auth/auth.module';
 import config from '../config';
 import { AppHTTPLogger } from './middlewares/logger.middleware';
 import 'winston-daily-rotate-file';
-import { initMigration1681048409651 } from './database/migrations/1681048409651-initMigration';
-import { changeWish11681048746753 } from './database/migrations/1681048746753-changeWish1';
-import { changeWish21681064987122 } from './database/migrations/1681064987122-changeWish2';
-import { changeOffer11681233144859 } from './database/migrations/1681233144859-changeOffer1';
-import { changeUser11681658048773 } from './database/migrations/1681658048773-changeUser1';
-import { changeWish31682161462011 } from './database/migrations/1682161462011-changeWish3';
-import { changeWishlists11682238765586 } from './database/migrations/1682238765586-changeWishlists1';
-import { changeWishlists21682267419503 } from './database/migrations/1682267419503-changeWishlists2';
-import { changeWishlists21682268049343 } from './database/migrations/1682268049343-changeWishlists2';
+import { initMigration1681048409651 } from './migrations/1681048409651-initMigration';
+import { changeWish11681048746753 } from './migrations/1681048746753-changeWish1';
+import { changeWish21681064987122 } from './migrations/1681064987122-changeWish2';
+import { changeOffer11681233144859 } from './migrations/1681233144859-changeOffer1';
+import { changeUser11681658048773 } from './migrations/1681658048773-changeUser1';
+import { changeWish31682161462011 } from './migrations/1682161462011-changeWish3';
+import { changeWishlists11682238765586 } from './migrations/1682238765586-changeWishlists1';
+import { changeWishlists21682267419503 } from './migrations/1682267419503-changeWishlists2';
+import { changeWishlists21682268049343 } from './migrations/1682268049343-changeWishlists2';
 
 @Module({
   imports: [
@@ -39,7 +39,7 @@ import { changeWishlists21682268049343 } from './database/migrations/16822680493
         username: configService.get('database.usename'),
         password: configService.get('database.password'),
         database: configService.get('database.name'),
-        synchronize: false,
+        synchronize: true,
         // logging: true,
         entities: [Offer, User, Wish, Wishlist],
         // subscribers: [],
