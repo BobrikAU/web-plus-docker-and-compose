@@ -42,7 +42,6 @@ services:
       - backend-database
 volumes:
   kpd_database_volume:
-    name: "kpd_database_volume"
 networks:
   backend-database:
     driver: bridge
