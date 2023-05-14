@@ -1,4 +1,4 @@
-version: "1"
+version: "3"
 services:
   kpd_backend_container:
     container_name: kpd_backend_container
