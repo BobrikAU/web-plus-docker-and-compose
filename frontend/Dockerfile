@@ -5,7 +5,7 @@ RUN npm ci
 COPY ./ ./
 RUN npm run build
 
-FROM nginx:1.23.1-alpine AS kpd_frontend
+FROM nginx:latest AS kpd_frontend
 COPY --from=kpd_frontend_builder /app/build /usr/share/nginx/html
 COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d
 EXPOSE 80
