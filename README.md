@@ -14,19 +14,20 @@
 
 ### Использованные технологии
 
-Docker, DockerCompose, Nginx, PostgreSQL
+Docker, Docker Compose, Nginx
 
 ### Используемые команды для запуска приложения
 
-Первоначально необходимо склонироватьрепозиторий на сервер. В дальнейшем web-приложение разворачивается одной командой: \
+Первоначально необходимо склонировать репозиторий на сервер. В дальнейшем web-приложение разворачивается одной командой:
 
-- `git clone https://github.com/BobrikAU/kupipodariday-backend.git` – клонирование репозитория приложения; \
-- `cd kupipodariday-backend` – переход в корневую папку с клонированным приложения; \
-- `docker-composeup -d` – запускформированияdocker-образов, запуск docker-контейнеров и организация сетей между ними в автоматическом порядке в фоновом режиме. Frontendдоступен на порту 8081.Backendдоступен на порту 4000. \
-  Для остановки приложения используется команда `docker-compose down` .
+- `git clone https://github.com/BobrikAU/kupipodariday-backend.git` – клонирование репозитория приложения;
+- `cd kupipodariday-backend` – переход в корневую папку с клонированным приложения;
+- `docker-composeup -d` – запуск формирования docker-образов, запуск docker-контейнеров и организация сетей между ними в автоматическом порядке в фоновом режиме. Frontend доступен на порту 8081. Backend доступен на порту 4000.
+
+Для остановки приложения используется команда `docker-compose down` .
 
 ### Размещение проекта:
 
-- ipсервера: 84.201.158.190 \
-- Frontend: https://kpd.kirbob.nomoredomains.monster \
+- ipсервера: 84.201.158.190
+- Frontend: https://kpd.kirbob.nomoredomains.monster
 - Backend: https://api.kpd.kirbob.nomoredomains.monster
