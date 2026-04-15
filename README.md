@@ -1,33 +1,58 @@
-# Докеризация и делой сервиса КупиПодариДай
+# Dockerisierung und Deployment des Dienstes „KaufSchenkGib“
 
-Учебный проект Яндекс.Практикума
+Lernprojekt (Yandex Praktikum)
 
-## Описание сервиса КупиПодариДай
+[Русский](./README.ru.md)
 
-Сервис КупиПодариДай представляет собой площадку, на которой пользователи могут показать свои желания (подарки, которые они хотят получить), а также участвовать в сборе денежных средств на приобретение подарков по желаниям других пользователей.
+## Beschreibung des Dienstes
 
-## Цели учебного проекта
+Der Dienst „KaufSchenkGib“ ist eine Plattform, auf der Nutzer ihre Wünsche (Geschenke, die sie erhalten möchten) veröffentlichen können. Zudem haben andere Nutzer die Möglichkeit, sich finanziell an der Erfüllung dieser Wünsche zu beteiligen.
 
-В данной работе студент должен был на практике применить полученные теоретические знания по формированию изолированных модулей web-приложения. При этом было необходимо создать docker-образы, разместить их на сервере, организовать их взаимодействие, обеспечить автоматизации данного процесса. Формирование docker-образов, согласно требованиям проекта, осуществлялось в два этапа для того, чтобы исключить в итоговых образах неиспользуемые в рабочей версии приложения dev-зависимости, сократить размеры образов.Обеспечена возможность обращения к приложению по https-протоколу. По окончании работы у студента должны были сформироваться практические навыки докеризации web-приложения и его деплоя в таком виде на сервер.
+## Ziel des Projekts
 
-Для реализации проекта студенту следовало использовать код клиентской части web-приложения, предоставленный Яндекс.Практикумом, а также разработанный студентом в рамках прошлого учебного проекта код северной части web-приложения (репозиторий [здесь](https://github.com/BobrikAU/kupipodariday-backend)).
+Ziel dieses Projekts war es, die theoretischen Kenntnisse zur Strukturierung von Webanwendungen in isolierte Module praktisch anzuwenden.
 
-### Использованные технологии
+Im Rahmen des Projekts wurden:
 
-Docker, Docker Compose, Nginx
+- Docker-Images erstellt
+- die Anwendung auf einem Server bereitgestellt
+- die Interaktion zwischen den Containern organisiert
+- der gesamte Prozess automatisiert
 
-### Используемые команды для запуска приложения
+Die Erstellung der Docker-Images erfolgte in zwei Stufen, um unnötige Entwicklungsabhängigkeiten (Dev-Dependencies) aus den finalen Images zu entfernen und deren Größe zu reduzieren.
 
-Первоначально необходимо склонировать репозиторий на сервер. В дальнейшем web-приложение разворачивается одной командой:
+Darüber hinaus wurde der Zugriff auf die Anwendung über das HTTPS-Protokoll ermöglicht.
 
-- `git clone https://github.com/BobrikAU/kupipodariday-backend.git` – клонирование репозитория приложения;
-- `cd kupipodariday-backend` – переход в корневую папку с клонированным приложения;
-- `docker-composeup -d` – запуск формирования docker-образов, запуск docker-контейнеров и организация сетей между ними в автоматическом порядке в фоновом режиме. Frontend доступен на порту 8081. Backend доступен на порту 4000.
+Nach Abschluss des Projekts wurden praktische Kenntnisse in der Dockerisierung von Webanwendungen sowie deren Deployment auf einem Server erworben.
 
-Для остановки приложения используется команда `docker-compose down` .
+## Projektbasis
 
-### Размещение проекта:
+Für die Umsetzung wurde:
 
-- ipсервера: 84.201.158.190
-- Frontend: https://kpd.kirbob.nomoredomains.monster
-- Backend: https://api.kpd.kirbob.nomoredomains.monster
+- der vom Yandex Praktikum bereitgestellte Frontend-Code
+- sowie der im vorherigen Projekt selbst entwickelte Backend-Code
+
+verwendet.
+
+## Verwendete Technologien
+
+- Docker
+- Docker Compose
+- Nginx
+
+## Start des Projekts
+
+Zunächst muss das Repository geklont werden:
+
+- `git clone https://github.com/BobrikAU/kupipodariday-backend.git`
+- `cd kupipodariday-backend`
+- `docker-compose up -d`
+
+Nach dem Start:
+
+- Frontend: Port 8081
+- Backend: Port 4000
+
+Zum Stoppen der Anwendung:
+
+- `docker-compose down`
