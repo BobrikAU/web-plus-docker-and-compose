@@ -30,7 +30,7 @@ Nach Abschluss des Projekts wurden praktische Kenntnisse in der Dockerisierung v
 Für die Umsetzung wurde:
 
 - der vom Yandex Praktikum bereitgestellte Frontend-Code
-- sowie der im vorherigen Projekt selbst entwickelte Backend-Code
+- sowie der im vorherigen [Projekt](https://github.com/BobrikAU/kupipodariday-backend) selbst entwickelte Backend-Code
 
 verwendet.
 
